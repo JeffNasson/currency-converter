@@ -1,0 +1,40 @@
+.currency-parent{
+    height: 10em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.currency-input-dropdowns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 5em;
+    width: 50%;
+    border-style: solid;
+    border-color: red;
+}
+
+.currency-input-dropdowns>input{
+    height: 20%;
+    width: 15%;
+}
+
+.currency-input-dropdowns>select{
+    height: 27%;
+    width: 25%;
+}
+
+.currency-input-dropdowns>h2{
+    font-size: 1em;
+}
+
+.currency-from-to{
+    height: 20%;
+    width: 50%;
+    font-size: 6px;
+    text-align: center;
+}
