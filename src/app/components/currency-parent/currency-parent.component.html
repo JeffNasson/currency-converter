@@ -1,17 +1,16 @@
 <div class='currency-parent'>
-  <div class='currency-input-dropdowns'>
-    <input type='number' />
-    <select>
-      <option value="placeholder for function">placeholder</option>
+  <div class='currency-input-dropdowns' >
+    <h2>1</h2>
+    <select> <!--  class="form-control1 select-currency1" (change)="updateCurrency($event.target.value)" -->
+        <option>USD</option>  <!--*ngFor="let value of currencyValuePairs;let i = index" [value]="i"-->
     </select>
-    <h2>equals</h2>
-    <input type='number' />
-    <select>
-      <option value="placeholder value">Placeholder</option>
+    <h2>Converted To</h2>
+    <!-- <app-currency-logic [passedInCurrency]="selectedCurrency"></app-currency-logic> -->
+    <select class="form-control2 select-currency2" (change)="updateCurrency($event.target.value)">
+        <option *ngFor="let value of currencyValuePairs;let i = index" [value]="i">{{value['currencyCode']}}</option>
     </select>
   </div>
   <div class='currency-from-to'>
-    <h1>1 FROM CURRENCY = CALCULATED TO CURRENCY</h1>
-    <h1>1 TO CURRENCY = CALCULATED FROM CURRENCY</h1>
+    <app-currency-logic [passedInCurrency]="selectedCurrency"></app-currency-logic>
   </div>
 </div>
