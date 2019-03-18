@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 }
 
 .currency-input-dropdowns{
@@ -13,9 +12,9 @@
     justify-content: space-around;
     align-items: center;
     height: 5em;
-    width: 50%;
+    width: 25%;
     border-style: solid;
-    border-color: red;
+    border-color: black;
 }
 
 .currency-input-dropdowns>input{
