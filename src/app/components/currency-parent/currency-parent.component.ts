@@ -30,7 +30,7 @@ export class CurrencyParentComponent implements OnInit {
         let currencyVals = Object.keys(res['rates']);
         for(let i=0;i < currencyVals.length; i++) {
           this.currencyValuePairs.push(new CurrencyTypes(currencyVals[i], res['rates'][currencyVals[i]]));
-          console.log(this.currencyValuePairs)
+          // console.log(this.currencyValuePairs)
         }
         this.url = res['base'];
       }

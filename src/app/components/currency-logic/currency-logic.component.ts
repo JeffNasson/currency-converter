@@ -13,9 +13,11 @@ export class CurrencyLogicComponent implements OnInit {
   private privatePassedInCurrency:CurrencyTypes = {currencyCode:'', currencyRate:0};
   public countryDetails: Country[] = [];
   public currencyDetails = {name:''};
+  
 
   @Input() 
   set passedInCurrency(value: CurrencyTypes) {
+    // console.log(value)
     if(value.currencyCode !== '') { //if the value of currencyCode is not blank, push that code
       this.privatePassedInCurrency = value;
       this.countryCodeService.getDetailFromCountryCode(this.privatePassedInCurrency['currencyCode']) //a loop function zombified from stack, calls the service to make an api call. then take the response and sets currencyDetails to res[index0]. Then loops through the res and pushes the matches to countryDetails
@@ -26,18 +28,18 @@ export class CurrencyLogicComponent implements OnInit {
               this.countryDetails.push(res[i]);
             }
           }
-        )
-      }
+          )
+        }
     }
       
   get passedInCurrency():CurrencyTypes {
     return this.privatePassedInCurrency;
   }
-
+  
   constructor(private countryCodeService:CountryCodeService) { }
-
+  
   ngOnInit() {
-
+    
   }
 
 

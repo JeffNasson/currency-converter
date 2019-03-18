@@ -1,8 +1,13 @@
 <div class='currency-logic-parent'>
-  <h1>
-    $1 = {{passedInCurrency.currencyRate | currency: passedInCurrency.currencyCode}}
-  </h1>
-  <h1>
-    1 {{ passedInCurrency.currencyCode}} = $ {{1/passedInCurrency.currencyRate}}
-  </h1>
+  <div *ngIf="privatePassedInCurrency.currencyCode !=''; else elseBlock ">
+      <h1>
+          $1 = {{passedInCurrency.currencyRate | currency: passedInCurrency.currencyCode}}
+        </h1>
+        <h1>
+          1 {{ passedInCurrency.currencyCode}} = $ {{1/passedInCurrency.currencyRate}}
+        </h1>
+  </div>
+  <ng-template #elseBlock>
+    <h1>Please Select A Currency</h1>
+  </ng-template>
 </div>
