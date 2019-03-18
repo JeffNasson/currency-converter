@@ -10,7 +10,7 @@ import {CurrencyTypes} from '../../models/CurrencyTypes';
   styleUrls: ['./currency-logic.component.css']
 })
 export class CurrencyLogicComponent implements OnInit {
-  private privatePassedInCurrency:CurrencyTypes = {currencyCode:'', currencyRate:0};
+  public privatePassedInCurrency:CurrencyTypes = {currencyCode:'', currencyRate:0};
   public countryDetails: Country[] = [];
   public currencyDetails = {name:''};
   
